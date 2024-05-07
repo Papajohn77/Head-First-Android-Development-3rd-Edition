@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Bits and Pizzas</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="order_fragment_text">This is the order fragment.</string>
     <string name="delicious_pizza">Delicious Pizza</string>
+    <string name="pizza_type">Which type of pizza would you like?</string>
+    <string name="pizza_extras">Please choose any extras:</string>
+    <string name="send_order">Send order</string>
 </resources>
