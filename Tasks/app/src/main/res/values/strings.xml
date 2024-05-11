@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tasks</string>
+    <string name="enter_task_name">Enter a task name</string>
+    <string name="save_task">Save Task</string>
+</resources>
