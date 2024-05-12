@@ -2,4 +2,6 @@
     <string name="app_name">Tasks</string>
     <string name="enter_task_name">Enter a task name</string>
     <string name="save_task">Save Task</string>
+    <string name="update_task">Update Task</string>
+    <string name="delete_task">Delete Task</string>
 </resources>
