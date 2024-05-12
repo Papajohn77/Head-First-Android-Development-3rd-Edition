@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tasks.databinding.TaskItemBinding
 
 class TaskItemAdapter :
     ListAdapter<Task, TaskItemAdapter.TaskItemViewHolder>(TaskDiffItemCallback())
@@ -24,20 +25,18 @@ class TaskItemAdapter :
         holder.bind(item)
     }
 
-    class TaskItemViewHolder(private val rootView: CardView) : RecyclerView.ViewHolder(rootView) {
-        private val taskName = rootView.findViewById<TextView>(R.id.task_name)
-        private val taskDone = rootView.findViewById<CheckBox>(R.id.task_done)
-
+    class TaskItemViewHolder(private val binding: TaskItemBinding) :
+        RecyclerView.ViewHolder(binding.root)
+    {
         fun bind(item: Task) {
-            taskName.text = item.name
-            taskDone.isChecked = item.isDone
+            binding.task = item
         }
 
         companion object {
             fun inflateFrom(parent: ViewGroup): TaskItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val view = layoutInflater.inflate(R.layout.task_item, parent, false) as CardView
-                return TaskItemViewHolder(view)
+                val binding = TaskItemBinding.inflate(layoutInflater, parent, false)
+                return TaskItemViewHolder(binding)
             }
         }
     }
